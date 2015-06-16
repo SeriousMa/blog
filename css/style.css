@@ -460,8 +460,12 @@ a {
     padding: 10px 0;
     margin-left: 0;
   }
-  #container #footer {
-    margin: 10px;
+  #container #footer .footer-left {
+    float: initial;
+    margin-bottom: 10px;
+  }
+  #container #footer .footer-right {
+    float: initial;
   }
 }
 .header-author {
@@ -716,8 +720,8 @@ a {
 }
 .archives-wrap {
   position: relative;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 30px;
+  margin: 30px;
   padding-right: 60px;
   border-bottom: 1px solid #eee;
   background: #fff;
@@ -842,12 +846,14 @@ a {
   padding-left: 8px;
   font-size: 12px;
 }
+.body-wrap {
+  margin-bottom: 80px;
+}
 .article {
-  margin: 30px 40px 30px 40px;
+  margin: 30px;
   position: relative;
   border: 1px solid #ddd;
   background: #fff;
-  visibility: hidden;
   -webkit-transition: all 0.2s ease-in;
 }
 .article.show {
@@ -858,6 +864,9 @@ a {
   -moz-animation: cd-bounce-1 0.6s;
   -ms-animation: cd-bounce-1 0.6s;
   animation: cd-bounce-1 0.6s;
+}
+.article.hidden {
+  visibility: hidden;
 }
 .article img {
   max-width: 100%;
@@ -1033,7 +1042,7 @@ a {
   max-width: 100%;
 }
 .article-entry strong {
-  font-weight: 300;
+  font-weight: bold;
 }
 .article-entry .caption {
   display: block;
@@ -1060,6 +1069,9 @@ a {
   border: 1px solid #ccc;
   text-shadow: 0 1px #444;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+}
+.article-entry pre code {
+  font-size: 14px;
 }
 .article-entry table {
   width: 100%;
@@ -1313,8 +1325,8 @@ a {
 }
 .archives-wrap {
   position: relative;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin: 30px;
+  margin: 30px;
   padding-right: 60px;
   border-bottom: 1px solid #eee;
   background: #fff;
@@ -1560,7 +1572,7 @@ a {
   text-decoration: underline;
 }
 pre .comment {
-  color: #666;
+  color: #ddd;
 }
 pre .title {
   color: #a6e22e;
@@ -1621,9 +1633,14 @@ pre .javascript .function {
   font-size: 12px;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
   text-shadow: 0 1px #fff;
-  margin: 10px 40px 10px 40px;
-  padding-bottom: 30px;
+  position: absolute;
+  bottom: 30px;
+  opacity: 0.6;
+  width: 100%;
   text-align: center;
+}
+#footer .outer {
+  padding: 0 30px;
 }
 .footer-left {
   float: left;
@@ -1659,6 +1676,7 @@ pre .javascript .function {
   display: inline-block;
   color: #fff;
   line-height: 20px;
+  font-size: 12px;
   margin: 0 3px 30px;
 }
 #page-nav .page-number:hover {
@@ -1683,7 +1701,7 @@ pre .javascript .function {
   opacity: 1;
 }
 #post-instagram {
-  padding: 30px 40px 30px 40px;
+  padding: 30px;
 }
 #post-instagram .article-entry {
   padding-right: 0;
