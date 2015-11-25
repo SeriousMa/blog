@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Serious blog</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Serious blog">
-<meta property="og:url" content="http://masanduo.com/index.html">
-<meta property="og:site_name" content="Serious blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Serious blog">
+<meta name="twitter:title" content="Hexo">
 <meta name="twitter:description">
   
-    <link rel="alternative" href="/atom.xml" title="Serious blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -35,7 +35,7 @@
 		</a>
 
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Duo Ma</a></h1>
+		  <h1 class="header-author"><a href="/">Serious</a></h1>
 		</hgroup>
 
 		
@@ -103,7 +103,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Nginx-lua/" style="font-size: 10px;">Nginx lua</a>
+						<a href="/tags/Nginx-lua/" style="font-size: 10px;">Nginx lua</a> <a href="/tags/elasticsearch/" style="font-size: 10px;">elasticsearch</a>
 					</div>
 				</section>
 				
@@ -126,7 +126,7 @@
       <nav id="mobile-nav">
   	<div class="overlay">
   		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">Duo Ma</h1>
+  		<h1 class="header-author js-mobile-header hide">Serious</h1>
   	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
@@ -134,7 +134,7 @@
 				<img lazy-src="https://avatars3.githubusercontent.com/u/464213?v=3&amp;s=460" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author">Duo Ma</h1>
+			  <h1 class="header-author">Serious</h1>
 			</hgroup>
 			
 			<nav class="header-menu">
@@ -163,6 +163,61 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-elasticsearch集群搭建和压测" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/23/elasticsearch集群搭建和压测/" class="article-date">
+  	<time datetime="2015-11-23T02:03:55.000Z" itemprop="datePublished">2015-11-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/23/elasticsearch集群搭建和压测/">elasticsearch集群搭建和压测</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>elasticsearch</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/elasticsearch/">elasticsearch</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-Nginx-lua线上和开发环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -189,9 +244,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="线上环境">线上环境</h1><p>使用<a href="http://openresty.org/" target="_blank" rel="external">OpenResty</a>安装.</p>
+        <p>#线上环境<br>使用<a href="http://openresty.org/" target="_blank" rel="external">OpenResty</a>安装.</p>
 <p>我理解为类似WampServer一站式安装包(不对请指正)</p>
-<figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="char">$ </span>wget <span class="method">http:</span>//openresty.org/download/ngx_openresty-<span class="number">1.7</span>.10.1.tar.gz</span><br><span class="line"><span class="char">$ </span>tar -zxvf ngx_openresty-<span class="number">1.7</span>.10.1.tar.gz</span><br><span class="line"><span class="char">$ </span>cd ngx_openresty-<span class="number">1.7</span>.10.1</span><br><span class="line"><span class="char">$ </span>./configure</span><br><span class="line"><span class="char">$ </span>make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ wget http:<span class="comment">//openresty.org/download/ngx_openresty-1.7.10.1.tar.gz</span></span><br><span class="line">$ tar -zxvf ngx_openresty-<span class="number">1.7</span><span class="number">.10</span><span class="number">.1</span>.tar.gz</span><br><span class="line">$ cd ngx_openresty-<span class="number">1.7</span><span class="number">.10</span><span class="number">.1</span></span><br><span class="line">$ ./configure</span><br><span class="line">$ make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
 <p>configure之前需要安装的相关组件</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y <span class="keyword">install</span> gcc zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure>
 <p>安装目录默认会在</p>
@@ -201,9 +256,9 @@
 <p>测试nginx+lua</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> /usr/<span class="keyword">local</span>/openresty/nginx/<span class="keyword">conf</span></span><br></pre></td></tr></table></figure>
 <p>在nginx.conf里添加测试内容</p>
-<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location /hello &#123;</span><br><span class="line">       default_type 'text/plain';</span><br><span class="line">       content_by_lua 'ngx.<span class="keyword">say</span>(<span class="string">"ok"</span>)';</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">location</span> /hello &#123;</span><br><span class="line">       <span class="title">default_type</span> <span class="string">'text/plain'</span>;</span><br><span class="line">       <span class="title">content_by_lua</span> <span class="string">'ngx.say("ok")'</span>;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
 <p>启动nginx</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sbin/nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sbin/nginx</span><br></pre></td></tr></table></figure>
 <p>浏览器访问页面显示ok,完毕!</p>
 
       
@@ -290,7 +345,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015 Duo Ma
+    		&copy; 2015 Serious
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
