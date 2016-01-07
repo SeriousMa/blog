@@ -220,7 +220,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="微信朋友圈技术实现调研">微信朋友圈技术实现调研</h1><ol>
+        <ol>
 <li>feed</li>
 <li>comment</li>
 <li>photo video url</li>
@@ -327,7 +327,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>elasticsearch</p>
+        <p>先把压测结果发出来,以后再补搭建流程</p>
+<h2 id="相关配置信息">相关配置信息</h2><h3 id="虚机">虚机</h3><p>cpu:2 core</p>
+<p>memory:4g</p>
+<h3 id="elasticsearch">elasticsearch</h3><p>version: 1.7</p>
+<p>jvm: -Xms1g -Xmx2g -XX:MaxPermSize=512m</p>
+<p>shards(主分片): 5</p>
+<p>replicas(从分片): 1 (比例)</p>
+<h2 id="创建索引">创建索引</h2><h3 id="执行命令">执行命令</h3><p>请求量100W 并发1000</p>
+<p>ab -n 1000000 -c1000 -p abtest <a href="http://172.31.14.244:9200/group/group" target="_blank" rel="external">http://172.31.14.244:9200/group/group</a></p>
+<h3 id="结果">结果</h3><p>qps: 3357.64 s</p>
+<p>tps: 297.828 ms</p>
+<p>cpu: 75%</p>
+<p>load average: 4</p>
+<h2 id="搜索">搜索</h2><p>100W条数据中查询并命中10条</p>
+<h3 id="执行">执行</h3><p>请求量100W 并发100</p>
+<p>ab -n 1000000 -c 100 <a href="http://172.31.14.244:9200/group/_search?q=description:呵呵" target="_blank" rel="external">http://172.31.14.244:9200/group/_search?q=description:呵呵</a></p>
+<h3 id="结果-1">结果</h3><p>qps: 2727.95 s</p>
+<p>tps: 36.658 ms</p>
+<p>cpu: 50%</p>
+<p>load average: 4</p>
+<p>GC数据: </p>
+<h3 id="执行-1">执行</h3><p>请求量100W 并发500</p>
+<p>ab -n 1000000 -c 500 <a href="http://172.31.14.244:9200/group/_search?q=description:呵呵" target="_blank" rel="external">http://172.31.14.244:9200/group/_search?q=description:呵呵</a></p>
+<h3 id="结果-2">结果</h3><p>qps: 2727.95 s</p>
+<p>tps: 184.812 ms</p>
+<p>cpu: 50%</p>
+<p>load average: 4</p>
+<p>GC数据: </p>
 
       
     </div>
