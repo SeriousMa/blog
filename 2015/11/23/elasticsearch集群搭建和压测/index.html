@@ -255,29 +255,29 @@ ab -n 1000000 -c1000 -p ab">
     <div class="article-entry" itemprop="articleBody">
       
         <p>先把压测结果发出来,以后再补搭建流程</p>
-<h2 id="相关配置信息">相关配置信息</h2><h3 id="虚机">虚机</h3><p>cpu:2 core</p>
+<h2 id="u76F8_u5173_u914D_u7F6E_u4FE1_u606F"><a href="#u76F8_u5173_u914D_u7F6E_u4FE1_u606F" class="headerlink" title="相关配置信息"></a>相关配置信息</h2><h3 id="u865A_u673A"><a href="#u865A_u673A" class="headerlink" title="虚机"></a>虚机</h3><p>cpu:2 core</p>
 <p>memory:4g</p>
-<h3 id="elasticsearch">elasticsearch</h3><p>version: 1.7</p>
+<h3 id="elasticsearch"><a href="#elasticsearch" class="headerlink" title="elasticsearch"></a>elasticsearch</h3><p>version: 1.7</p>
 <p>jvm: -Xms1g -Xmx2g -XX:MaxPermSize=512m</p>
 <p>shards(主分片): 5</p>
 <p>replicas(从分片): 1 (比例)</p>
-<h2 id="创建索引">创建索引</h2><h3 id="执行命令">执行命令</h3><p>请求量100W 并发1000</p>
+<h2 id="u521B_u5EFA_u7D22_u5F15"><a href="#u521B_u5EFA_u7D22_u5F15" class="headerlink" title="创建索引"></a>创建索引</h2><h3 id="u6267_u884C_u547D_u4EE4"><a href="#u6267_u884C_u547D_u4EE4" class="headerlink" title="执行命令"></a>执行命令</h3><p>请求量100W 并发1000</p>
 <p>ab -n 1000000 -c1000 -p abtest <a href="http://172.31.14.244:9200/group/group" target="_blank" rel="external">http://172.31.14.244:9200/group/group</a></p>
-<h3 id="结果">结果</h3><p>qps: 3357.64 s</p>
+<h3 id="u7ED3_u679C"><a href="#u7ED3_u679C" class="headerlink" title="结果"></a>结果</h3><p>qps: 3357.64 s</p>
 <p>tps: 297.828 ms</p>
 <p>cpu: 75%</p>
 <p>load average: 4</p>
-<h2 id="搜索">搜索</h2><p>100W条数据中查询并命中10条</p>
-<h3 id="执行">执行</h3><p>请求量100W 并发100</p>
+<h2 id="u641C_u7D22"><a href="#u641C_u7D22" class="headerlink" title="搜索"></a>搜索</h2><p>100W条数据中查询并命中10条</p>
+<h3 id="u6267_u884C"><a href="#u6267_u884C" class="headerlink" title="执行"></a>执行</h3><p>请求量100W 并发100</p>
 <p>ab -n 1000000 -c 100 <a href="http://172.31.14.244:9200/group/_search?q=description:呵呵" target="_blank" rel="external">http://172.31.14.244:9200/group/_search?q=description:呵呵</a></p>
-<h3 id="结果-1">结果</h3><p>qps: 2727.95 s</p>
+<h3 id="u7ED3_u679C-1"><a href="#u7ED3_u679C-1" class="headerlink" title="结果"></a>结果</h3><p>qps: 2727.95 s</p>
 <p>tps: 36.658 ms</p>
 <p>cpu: 50%</p>
 <p>load average: 4</p>
 <p>GC数据: </p>
-<h3 id="执行-1">执行</h3><p>请求量100W 并发500</p>
+<h3 id="u6267_u884C-1"><a href="#u6267_u884C-1" class="headerlink" title="执行"></a>执行</h3><p>请求量100W 并发500</p>
 <p>ab -n 1000000 -c 500 <a href="http://172.31.14.244:9200/group/_search?q=description:呵呵" target="_blank" rel="external">http://172.31.14.244:9200/group/_search?q=description:呵呵</a></p>
-<h3 id="结果-2">结果</h3><p>qps: 2727.95 s</p>
+<h3 id="u7ED3_u679C-2"><a href="#u7ED3_u679C-2" class="headerlink" title="结果"></a>结果</h3><p>qps: 2727.95 s</p>
 <p>tps: 184.812 ms</p>
 <p>cpu: 50%</p>
 <p>load average: 4</p>
