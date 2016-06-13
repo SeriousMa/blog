@@ -1,0 +1,3 @@
+title: Hello World
+---
+搭了个github+hexo的blog搭了一天...我也是醉了...
