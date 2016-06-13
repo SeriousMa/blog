@@ -28,7 +28,7 @@
   
     <link rel="icon" href="/favicon.png">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -61,11 +61,6 @@
 							<div class="ribbon"></div>
 						</div>
 						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
 						
 						<div class="icon-wrap icon-me hide" data-idx="3">
 							<div class="user"></div>
@@ -78,10 +73,8 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>菜单</li>
+						<li>Menu</li>
 						<li>Tags</li>
-						
-						<li>友情链接</li>
 						
 						
 						<li>Über</li>
@@ -125,28 +118,10 @@
 				
 				
 				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
-			        
-			        </div>
-				</section>
-				
 
 				
 				
-				<section class="switch-part switch-part4">
+				<section class="switch-part switch-part3">
 				
 					<div id="js-aboutme">一位无知的开发者...</div>
 				</section>
@@ -238,7 +213,7 @@
       
         <p>使用<a href="http://openresty.org/" target="_blank" rel="external">OpenResty</a>安装.</p>
 <p>我理解为类似WampServer一站式安装包(不对请指正)</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ wget http:<span class="comment">//openresty.org/download/ngx_openresty-1.7.10.1.tar.gz</span></span><br><span class="line">$ tar -zxvf ngx_openresty-<span class="number">1.7</span><span class="number">.10</span><span class="number">.1</span>.tar.gz</span><br><span class="line">$ cd ngx_openresty-<span class="number">1.7</span><span class="number">.10</span><span class="number">.1</span></span><br><span class="line">$ ./configure</span><br><span class="line">$ make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">$</span> wget http:<span class="comment">//openresty.org/download/ngx_openresty-1.7.10.1.tar.gz</span></span><br><span class="line"><span class="symbol">$</span> tar -zxvf ngx_openresty<span class="number">-1.7</span><span class="number">.10</span><span class="number">.1</span>.tar.gz</span><br><span class="line"><span class="symbol">$</span> cd ngx_openresty<span class="number">-1.7</span><span class="number">.10</span><span class="number">.1</span></span><br><span class="line"><span class="symbol">$</span> ./configure</span><br><span class="line"><span class="symbol">$</span> make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
 <p>configure之前需要安装的相关组件</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum -y <span class="keyword">install</span> gcc zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure>
 <p>安装目录默认会在</p>
@@ -248,9 +223,9 @@
 <p>测试nginx+lua</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> /usr/<span class="keyword">local</span>/openresty/nginx/<span class="keyword">conf</span></span><br></pre></td></tr></table></figure>
 <p>在nginx.conf里添加测试内容</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">location</span> /hello &#123;</span><br><span class="line">       <span class="title">default_type</span> <span class="string">'text/plain'</span>;</span><br><span class="line">       <span class="title">content_by_lua</span> <span class="string">'ngx.say("ok")'</span>;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> /hello &#123;</span><br><span class="line">       <span class="attribute">default_type</span> <span class="string">'text/plain'</span>;</span><br><span class="line">       <span class="attribute">content_by_lua</span> <span class="string">'ngx.say("ok")'</span>;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
 <p>启动nginx</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sbin/nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>sbin/nginx</span><br></pre></td></tr></table></figure>
 <p>浏览器访问页面显示ok,完毕!</p>
 
       
@@ -285,7 +260,7 @@
 <div class="share_jia">
 	<!-- JiaThis Button BEGIN -->
 	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<span class="jiathis_txt">Share to: &nbsp; </span>
 		<a class="jiathis_button_facebook"></a> 
     <a class="jiathis_button_twitter"></a>
     <a class="jiathis_button_plus"></a> 
@@ -342,7 +317,7 @@
 </footer>
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
 
 <script>
@@ -358,8 +333,8 @@
 		open_in_new: false
 	}
 </script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 

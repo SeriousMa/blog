@@ -4,74 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>微信朋友圈技术实现调研 | Serious Blog</title>
+  <title>Serious Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="feed
-comment
-photo video url
-timeline
-
-痛点
-协议
-集群模块划分
-容灾
-数据同步
-网络优化
-灰度上线
-弱网环境适配
-
-工作流程feed发送
-图片上传,不经过微信后台服务器,而是直接上传到最近的腾讯CDN节点,所以非常快.
-feed发布完成后,触发批处理操作,更新好友的timeline.
-
-增量拉取客户端保存上一次请求的timeline,服务端返回当前time">
-<meta property="og:type" content="article">
-<meta property="og:title" content="微信朋友圈技术实现调研">
-<meta property="og:url" content="http://yoursite.com/2016/01/07/微信朋友圈技术实现调研/index.html">
+  <meta name="description" content="myblog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Serious Blog">
+<meta property="og:url" content="http://yoursite.com/README.html">
 <meta property="og:site_name" content="Serious Blog">
-<meta property="og:description" content="feed
-comment
-photo video url
-timeline
-
-痛点
-协议
-集群模块划分
-容灾
-数据同步
-网络优化
-灰度上线
-弱网环境适配
-
-工作流程feed发送
-图片上传,不经过微信后台服务器,而是直接上传到最近的腾讯CDN节点,所以非常快.
-feed发布完成后,触发批处理操作,更新好友的timeline.
-
-增量拉取客户端保存上一次请求的timeline,服务端返回当前time">
-<meta property="og:image" content="http://yoursite.com/images/Quorum.png">
-<meta property="og:updated_time" content="2016-01-08T09:14:30.000Z">
+<meta property="og:description" content="myblog">
+<meta property="og:updated_time" content="2016-06-13T02:19:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信朋友圈技术实现调研">
-<meta name="twitter:description" content="feed
-comment
-photo video url
-timeline
-
-痛点
-协议
-集群模块划分
-容灾
-数据同步
-网络优化
-灰度上线
-弱网环境适配
-
-工作流程feed发送
-图片上传,不经过微信后台服务器,而是直接上传到最近的腾讯CDN节点,所以非常快.
-feed发布完成后,触发批处理操作,更新好友的timeline.
-
-增量拉取客户端保存上一次请求的timeline,服务端返回当前time">
-<meta name="twitter:image" content="http://yoursite.com/images/Quorum.png">
+<meta name="twitter:title" content="Serious Blog">
+<meta name="twitter:description" content="myblog">
   
     <link rel="alternative" href="/atom.xml" title="Serious Blog" type="application/atom+xml">
   
@@ -224,11 +168,11 @@ feed发布完成后,触发批处理操作,更新好友的timeline.
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-微信朋友圈技术实现调研" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/07/微信朋友圈技术实现调研/" class="article-date">
-  	<time datetime="2016-01-07T06:01:42.000Z" itemprop="datePublished">2016-01-07</time>
+      <a href="/README.html" class="article-date">
+  	<time datetime="2016-06-13T02:19:40.000Z" itemprop="datePublished">2016-06-13</time>
 </a>
     </div>
   
@@ -237,99 +181,15 @@ feed发布完成后,触发批处理操作,更新好友的timeline.
       <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      微信朋友圈技术实现调研
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信-朋友圈/">微信 朋友圈</a></li></ul>
-	</div>
-
-        
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <ol>
-<li>feed</li>
-<li>comment</li>
-<li>photo video url</li>
-<li>timeline</li>
-</ol>
-<h2 id="痛点"><a href="#痛点" class="headerlink" title="痛点"></a>痛点</h2><ol>
-<li>协议</li>
-<li>集群模块划分</li>
-<li>容灾</li>
-<li>数据同步</li>
-<li>网络优化</li>
-<li>灰度上线</li>
-<li>弱网环境适配</li>
-</ol>
-<h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><h3 id="feed发送"><a href="#feed发送" class="headerlink" title="feed发送"></a>feed发送</h3><ol>
-<li>图片上传,不经过微信后台服务器,而是直接上传到最近的腾讯CDN节点,所以非常快.</li>
-<li>feed发布完成后,触发批处理操作,更新好友的timeline.</li>
-</ol>
-<h3 id="增量拉取"><a href="#增量拉取" class="headerlink" title="增量拉取"></a>增量拉取</h3><p>客户端保存上一次请求的timeline,服务端返回当前timeline以后的发生的action id </p>
-<h3 id="全量拉取"><a href="#全量拉取" class="headerlink" title="全量拉取"></a>全量拉取</h3><p>客户端保存的timeline时间跨度过长,服务端返回最新X条数据并且更新timeline到最后一次时间</p>
-<h2 id="灰度上线"><a href="#灰度上线" class="headerlink" title="灰度上线"></a>灰度上线</h2><p>暂无详细资料</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="通信协议"><a href="#通信协议" class="headerlink" title="通信协议"></a>通信协议</h3><ol>
-<li>以前: XMPP 优点:简单,大量开源实现,缺点:状态初始化流量大,消息不可靠</li>
-<li>现在: SYNC协议,是参考Microsoft Exchange ActiveSync来实现的</li>
-<li>新老版本协议兼容</li>
-</ol>
-<h3 id="数据同步"><a href="#数据同步" class="headerlink" title="数据同步"></a>数据同步</h3><p><img src="/images/Quorum.png" alt="Quorum"><br><a href="http://blog.csdn.net/turkeyzhou/article/details/9307551" target="_blank" rel="external">Quorum</a>三机协议:<br>Quorum_KV是微信开发的一套数据强一致性存储系统,主要支持key-table和key-value两种存储模型.</p>
-<ol>
-<li>强一致性的Quorum容灾方案,支持读写容灾,双机互备,双向可写</li>
-<li>丰富的业务开发模型 <ul>
-<li>支持类SQL接口(不支持事务),提供丰富查询和更新接口 </li>
-<li>支持string-val的高性能key-val接口</li>
-<li>支持专用于存储索引的64bit有序数组接口</li>
-</ul>
-</li>
-<li>支持多机房部署容灾,目前支持kv2和kv6两种部署模式</li>
-<li>支持自动化数据迁移扩容</li>
-<li>高性能,在string-val模式下,已到达20wqps</li>
-</ol>
-<h3 id="服务质量"><a href="#服务质量" class="headerlink" title="服务质量"></a>服务质量</h3><ol>
-<li>模块优先级划分,物理隔离.</li>
-<li>可扩展性.</li>
-<li>接入层优化. 移动用户连接移动的节点,海外用户ip通过服务端测速逆向寻找最优接入点.</li>
-<li>流量监控. 对每一个用户的行为做一个监控,当发现异常的时候,后台会给终端发出指令,使得微信终端在一段时间无法联网,但是可以保证用户流量不会白白的使用掉.</li>
-</ol>
-<h2 id="容灾"><a href="#容灾" class="headerlink" title="容灾"></a>容灾</h2><ol>
-<li>功能权重 红包 点对点聊天 群组聊天 朋友圈 视频 摇一摇</li>
-<li>功能模块之间保持单独可用.敏感词服务挂了,不能影响消息发送</li>
-<li>主备容灾,双master写入,Quorum_KV数据容灾</li>
-<li>不同地区机房之间有专线连接,出问题时(上海–加拿大)切换至公网,走普通互联网通信(域名?)</li>
-</ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
+        <h1 id="myblog"><a href="#myblog" class="headerlink" title="myblog"></a>myblog</h1>
       
     </div>
     
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2015/11/23/elasticsearch集群搭建和压测/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">elasticsearch集群搭建和压测</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -359,7 +219,7 @@ feed发布完成后,触发批处理操作,更新好友的timeline.
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="微信朋友圈技术实现调研" data-title="微信朋友圈技术实现调研" data-url="http://yoursite.com/2016/01/07/微信朋友圈技术实现调研/"></div>
+	<div class="ds-thread" data-thread-key="undefined" data-title="" data-url="http://yoursite.com/README.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -403,7 +263,7 @@ feed发布完成后,触发批处理操作,更新好友的timeline.
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
